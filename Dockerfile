@@ -28,4 +28,6 @@ RUN mkdir -p imapsync/dist && cd imapsync && cpan -i Data::Uniqid JSON::WebToken
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+RUN mkdir -p /tmp/LOG_imapsync
+
 ENTRYPOINT ["imapsync"]
